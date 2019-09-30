@@ -355,6 +355,13 @@ int main(int argc, char** argv)
         cout << (styledJson ? st.styledJson() : st.multilineTrace());
     else if (mode == Mode::OutputOnly)
         cout << toHex(output) << '\n';
+	else if (mode == Mode::Log)
+	{
+		// Generate Logging Mdoe instruction
+		cout << "Stats not compatible" << scientific << << "\n";
+		// Expensive operation
+		// TO DO
+	}
     else if (mode == Mode::Test)
     {
         // Output information needed for test verification and benchmarking
